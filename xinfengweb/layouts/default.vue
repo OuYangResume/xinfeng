@@ -21,7 +21,18 @@
     </el-footer>
   </el-container>
 </template>
-
+<script>
+export default {
+  data() {
+    return {
+      activeIndex: "/"
+    };
+  },
+  created() {
+    this.activeIndex = this.$route.path;
+  }
+};
+</script>
 <style>
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
