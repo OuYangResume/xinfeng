@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header class="topHeader"></Header>
     <div class="lunbo">
     </div>
     <div class="main-solution">
@@ -47,74 +46,76 @@
     </div>
   </div>
 </template>
- 
+
 <script>
-import Header from '~/components/Header.vue'
 export default {
-  components: {
-    Header
-  }
-}
+  components: {}
+};
 </script>
- 
 <style scoped>
- .topHeader{
-   position: fixed;
-   top: 0;
-   width: 100%;
-   background: white;
- }
- .lunbo{
-   margin-top: 99px;
-   width: 100%;
-   height: 640px;
-   background: #005699;
- }
- .main-solution{
-   height: 460px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
- }
- .solution-title{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   padding-top: 30px;
- }
- .solution-text{
-   font-size: 26px;
-   color: #005699;
- }
- .solution-describle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
- .solution-describle > span{
-    margin: 0 10px;
-    font-size: 14px;
-    color: #999;
- }
- .solution-describle > hr{
-   width: 50px;
- }
- .solutionType{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   padding-bottom: 80px;
- }
- .solutionType > div{
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   align-items: center;
-   margin: 0 3vw;
- }
-  .solutionType > div > div:nth-child(2){
-   font-size: 18px;
-   font-weight: bold;
- }
+.topHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+}
+.lunbo {
+  margin-top: 99px;
+  width: 100%;
+  height: 640px;
+  background: #005699;
+}
+.main-solution {
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.solution-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+.solution-text {
+  font-size: 26px;
+  color: #005699;
+}
+.solution-describle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.solution-describle > span {
+  margin: 0 10px;
+  font-size: 14px;
+  color: #999;
+}
+.solution-describle > hr {
+  width: 50px;
+}
+.solutionType {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 80px;
+}
+.solutionType > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 3vw;
+}
+.solutionType > div > div:nth-child(2) {
+  font-size: 18px;
+  font-weight: bold;
+}
 </style>
+
+
+
+
+
+

@@ -1,6 +1,6 @@
-# nuxtdemo
+# xinfengweb
 
-> Nuxt.js project
+> xinfengweb
 
 ## Build Setup
 

@@ -17,8 +17,5 @@ module.exports = {
     'vue'
   ],
   // add your custom rules here
-  rules: {
-    "vue/no-parsing-error": [2, { "x-invalid-end-tag": false }],
-    "vue/html-self-closing": "off"
-  }
+  rules: {}
 }
