@@ -168,7 +168,6 @@ html {
   color: #fff;
   background-color: #35495e;
 }
-<<<<<<< HEAD
 
 .el-menu--horizontal>.el-menu-item {
     float: left;
@@ -194,9 +193,6 @@ html {
     justify-content: center;
 }
 .el-main{
-=======
-.el-header {
->>>>>>> 8c827ee14373ebae719fd8c133d78a36814019a5
   padding: 0;
 }
 .el-footer {
