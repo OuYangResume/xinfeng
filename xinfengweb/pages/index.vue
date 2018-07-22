@@ -1,6 +1,15 @@
 <template>
   <div>
     <div class="lunbo">
+      <div class="block">
+        <el-carousel trigger="click" height="640px">
+          <el-carousel-item v-for="item in imgList" :key="item">
+            <h3>
+              <img :src="item" alt="">
+            </h3>
+          </el-carousel-item>
+        </el-carousel>
+      </div>
     </div>
     <div class="main-solution">
       <div class="solution-title">
@@ -49,6 +58,22 @@
 
 <script>
 export default {
+  data () {
+    return {
+      imgList:     
+        [
+          'http://www.newfiber.com.cn/d/file/content/2016/10/581166208bb6a.jpg',
+          'http://www.newfiber.com.cn/d/file/content/2017/03/58c73fedd9c0d.jpg',
+          'http://www.newfiber.com.cn/d/file/content/2017/03/58c6757a9f44e.jpg'
+        ]
+    }
+  },
+  // props: {
+  //   imgList: {
+  //     type: Array,
+  //     required: true
+  //   }
+  // },
   components: {}
 };
 </script>
@@ -60,7 +85,7 @@ export default {
   background: white;
 }
 .lunbo {
-  margin-top: 99px;
+  margin-top: 101px;
   width: 100%;
   height: 640px;
   background: #005699;
