@@ -11,15 +11,10 @@
         </el-carousel>
       </div>
     </div>
+    <Classical></Classical>
     <div class="main-solution">
-      <div class="solution-title">
-        <div class="solution-text">解决方案</div>
-        <div class="solution-describle">
-          <hr>
-          <span>solution</span>
-          <hr>
-        </div>
-      </div>
+      <!-- <TitleMsgShow title="解决方案" titleEN="solution" titleBackground="https://i.loli.net/2018/07/22/5b545633ca9c9.png"></TitleMsgShow> -->
+      <TitleMsgShow title="解决方案" titleEN="solution"></TitleMsgShow>
       <div class="solutionType">
         <div class="ssc-solution">
           <div class="solutionImgBox">
@@ -57,6 +52,8 @@
 </template>
 
 <script>
+import Classical from '../components/Classical'
+import TitleMsgShow from '../components/common/TitleMsgShow'
 export default {
   data () {
     return {
@@ -74,7 +71,10 @@ export default {
   //     required: true
   //   }
   // },
-  components: {}
+  components: {
+    Classical,
+    TitleMsgShow
+  }
 };
 </script>
 <style scoped>
@@ -95,30 +95,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-.solution-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 30px;
-}
-.solution-text {
-  font-size: 26px;
-  color: #005699;
-}
-.solution-describle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.solution-describle > span {
-  margin: 0 10px;
-  font-size: 14px;
-  color: #999;
-}
-.solution-describle > hr {
-  width: 50px;
+  background: white;
 }
 .solutionType {
   display: flex;
