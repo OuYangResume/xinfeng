@@ -1,8 +1,9 @@
 <template>
     <div class="main">
         <div class="head">
-
+            <TitleMsgShow title="联系我们" titleEN="CONTACT US" titleBackground="../../assets/img/linkme/联系我们.png"></TitleMsgShow>
         </div>
+
         <el-row type="flex" class="row-bg">
             <el-col :span="24">
                 <div class="link-head">
@@ -43,6 +44,7 @@
 </template>
 
 <script>
+import TitleMsgShow from "../../components/common/TitleMsgShow";
 import Leaflet from "leaflet";
 import("leaflet/dist/leaflet.css");
 import mapProvider from "~/assets/js/leaflet.MapProviders.js";
@@ -80,6 +82,9 @@ export default {
   },
   mounted() {
     this.initMap();
+  },
+  components: {
+    TitleMsgShow
   }
 };
 </script>
@@ -93,6 +98,7 @@ export default {
   height: 300px;
   background-color: aqua;
   background-image: url("~/assets/img/linkme/联系我们.png");
+  background-size: 100% 300px;
 }
 .link-head {
   height: 200px;

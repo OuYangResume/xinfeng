@@ -1,8 +1,11 @@
 <template>
     <div class="recruit-mian">
         <el-row>
-            <el-col :span="24">
+            <el-col :span="24" class="talent-conent">
                 <TitleMsgShow title="人才理念" titleEN="TALENT CONCEPT"></TitleMsgShow>
+                <div class="talent">
+                    <p>德才兼备，以德为先，人才是公司最核心的竞争力！</p>
+                </div>
             </el-col>
         </el-row>
         <el-row>
@@ -15,33 +18,33 @@
                     <div class="table-info">
                         <el-table :data="newusers" element-loading-text="给我一点时间" show-header highlight-current-row:true style="width: 100%">
 
-                            <el-table-column align="center" width="150" label="职位名称">
+                            <el-table-column align="center" width="230" label="职位名称">
                                 <template slot-scope="scope">
                                     <span>{{scope.row.id}}</span>
                                 </template>
                             </el-table-column>
-                            <el-table-column width="150px" align="center" label="招聘人数">
+                            <el-table-column width="230" align="center" label="招聘人数">
                                 <template slot-scope="scope">
                                     <span>{{scope.row.userName}}</span>
                                 </template>
                             </el-table-column>
-                            <el-table-column min-width="150px" width="80" align="center" label="招聘部门">
+                            <el-table-column min-width="230" width="80" align="center" label="招聘部门">
                                 <template slot-scope="scope">
                                     <span>{{scope.row.password}}</span>
                                 </template>
                             </el-table-column>
-                            <el-table-column width="110px" align="center" label="学历要求">
+                            <el-table-column width="230" align="center" label="学历要求">
                                 <template slot-scope="scope">
                                     <span>{{scope.row.age}}</span>
                                 </template>
                             </el-table-column>
-                            <el-table-column width="180" align="center" label="发布日期">
+                            <el-table-column width="230" align="center" label="发布日期">
                                 <template slot-scope="scope">
                                     <span v-if="scope.row.lnglat.length>0 && scope.row.lnglat[0].address !=''">{{scope.row.lnglat[0].address}}</span>
                                     <span v-else>该用户还未添加地址</span>
                                 </template>
                             </el-table-column>
-                            <el-table-column align="center" width="65">
+                            <el-table-column align="center" width="230">
                                 <template slot-scope="scope">
                                     <span>详情</span>
                                 </template>
@@ -124,18 +127,29 @@ export default {
 .recruit-mian {
   margin-top: 101px;
 }
+.talent-conent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.talent {
+  width: 1400px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  background-image: url("~/assets/img/recruit/人才理念.png");
+  background-size: 100% 150px;
+}
 .recruit-info {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .recruit-info > span {
   font-size: 14px;
   color: #333333;
-  display: flex;
-  justify-content: center;
+  margin-bottom: 15px;
 }
 .pagination-container {
-  display: flex;
-  justify-content: center;
 }
 </style>
