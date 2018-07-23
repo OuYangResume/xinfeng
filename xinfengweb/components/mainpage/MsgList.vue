@@ -34,7 +34,4 @@ export default {
     font-size: 14px;
     color: #666;
 }
-.msgListTitle > span:nth-child(1){
-
-}
 </style>
