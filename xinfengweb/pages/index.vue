@@ -11,40 +11,39 @@
         </el-carousel>
       </div>
     </div>
-    <Classical></Classical>
     <div class="main-solution">
-      <!-- <TitleMsgShow title="解决方案" titleEN="solution" titleBackground="https://i.loli.net/2018/07/22/5b545633ca9c9.png"></TitleMsgShow> -->
-      <TitleMsgShow title="解决方案" titleEN="solution"></TitleMsgShow>
-      <div class="solutionType">
-        <div class="ssc-solution">
-          <div class="solutionImgBox">
-            <img src="~assets/img/solutionImg1.png" alt="智慧海绵城市">
+      <TitleMsgShow title="解决方案" titleEN="SOLUTION"></TitleMsgShow>
+      <Solution></Solution>
+    </div>
+    <Classical></Classical>
+    <div class="companyInfo">
+      <TitleMsgShow title="公司信息" titleEN="COMPANY INFORMATION"></TitleMsgShow>
+      <div style="display: flex;flex-wrap: wrap;justify-content: center;">
+        <div class="companyIntroduce" style="margin-right: 50px;">
+          <div class="companyIntroduceTitle">
+            <span>公司介绍</span>
+            <span>COMPANT INTRODUCTION</span>
           </div>
-          <div>智慧海绵城市</div>
+          <div style="width: 614px;">
+            <el-card :body-style="{ padding: '0px' }">
+                <img src="http://www.newfiber.com.cn/statics/default/images/_gsjjtp.jpg" class="image">
+                <div style="padding: 14px;">
+                  <div class="companyIntroduceInfo">2012年诞生于有世界光谷之称的武汉东湖高新技术开发区，公司位于武汉市东湖新技术开发区光谷大道303号光谷芯中心三期3-11幢1-5层1厂房单元，面积1500平米。公司注册资本1000万元，实收资本1000万元。自创始以来，公司始终坚持走自主创新之路，先后在无源激光测距、可调谐半导体激光吸收 光谱TDLAS、智慧海绵城市监测评价物联网系统开发等技术上有重大研究成果，拥有3项发明专利，50项实用新型专利，24项外观专利，36项软件著作权。2014年公司被认定为“高新技术企业”。2015年10月公司完成股份制改造。2015年12月通过ISO9001-2008质量管理体系认证。2016年7月先后取得信息系统集成资质证书、软企企业证书。2016年被成功认定为“瞪羚企业”。目前公司面向消费者提供的产品包括物联网领域的软、硬件产品、光机电一体化传感器、火灾探测器、气体传感器、水利水文仪器仪表和设备、环境监测治理仪器仪表和设备、气象监测仪器仪表的科研、开发、生产、销售、安装及售后服务；</div>
+                </div>
+            </el-card>
+          </div>
         </div>
-        <div class="smartWater">
-          <div class="solutionImgBox">
-            <img src="~assets/img/solutionImg2.png" alt="智慧水文">
+        <div class="companyNews">
+          <div class="companyIntroduceTitle">
+            <span>新闻中心</span>
+            <span>NEWS CENTER</span>
           </div>
-          <div>智慧水文</div>
-        </div>
-        <div class="smartDewatering">
-          <div class="solutionImgBox">
-            <img src="~assets/img/solutionImg3.png" alt="智慧排水">
+          <div style="width: 614px;">
+            <NewsShow></NewsShow>
+            <MsgList></MsgList>
+            <MsgList></MsgList>
+            <MsgList></MsgList>
           </div>
-          <div>智慧排水</div>
-        </div>
-        <div class="governWater">
-          <div class="solutionImgBox">
-            <img src="~assets/img/solutionImg4.png" alt="黑臭水体治理">
-          </div>
-          <div>黑臭水体治理</div>
-        </div>
-        <div class="smartWaterPerson">
-          <div class="solutionImgBox">
-            <img src="~assets/img/solutionImg5.png" alt="智慧河长">
-          </div>
-          <div class="">智慧河长</div>
         </div>
       </div>
     </div>
@@ -52,18 +51,21 @@
 </template>
 
 <script>
-import Classical from '../components/Classical'
-import TitleMsgShow from '../components/common/TitleMsgShow'
+import Classical from "../components/Classical";
+import TitleMsgShow from "../components/common/TitleMsgShow";
+import Solution from "../components/mainpage/Solution";
+import NewsShow from "../components/mainpage/NewsShow";
+import MsgList from "../components/mainpage/MsgList";
+
 export default {
-  data () {
+  data() {
     return {
-      imgList:     
-        [
-          'http://www.newfiber.com.cn/d/file/content/2016/10/581166208bb6a.jpg',
-          'http://www.newfiber.com.cn/d/file/content/2017/03/58c73fedd9c0d.jpg',
-          'http://www.newfiber.com.cn/d/file/content/2017/03/58c6757a9f44e.jpg'
-        ]
-    }
+      imgList: [
+        "http://www.newfiber.com.cn/d/file/content/2016/10/581166208bb6a.jpg",
+        "http://www.newfiber.com.cn/d/file/content/2017/03/58c73fedd9c0d.jpg",
+        "http://www.newfiber.com.cn/d/file/content/2017/03/58c6757a9f44e.jpg"
+      ]
+    };
   },
   // props: {
   //   imgList: {
@@ -73,7 +75,10 @@ export default {
   // },
   components: {
     Classical,
-    TitleMsgShow
+    TitleMsgShow,
+    Solution,
+    NewsShow,
+    MsgList
   }
 };
 </script>
@@ -97,22 +102,52 @@ export default {
   justify-content: space-around;
   background: white;
 }
-.solutionType {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 80px;
+.companyIntroduceTitle{
+  margin-bottom: 30px;
 }
-.solutionType > div {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 3vw;
-}
-.solutionType > div > div:nth-child(2) {
-  font-size: 18px;
+.companyIntroduceTitle > span:nth-child(1) {
+  font-size: 24px;
   font-weight: bold;
+  color: #333;
+}
+.companyIntroduceTitle > span:nth-child(2) {
+  margin-left: 30px;
+  font-size: 12px;
+  color: #666;
+}
+.companyInfo {
+  padding-bottom: 50px;
+  background: white;
+}
+.image {
+  width: 100%;
+  height: 450px;
+  display: block;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.companyIntroduceInfo {
+  position: relative;
+  line-height: 24px;
+  /* 3 times the line-height to show 3 lines */
+  height: 96px;
+  overflow: hidden;
+}
+.companyIntroduceInfo::after {
+  content: "...";
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 20px 1px 45px;
+  background: url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png)
+    repeat-y;
 }
 </style>
 
