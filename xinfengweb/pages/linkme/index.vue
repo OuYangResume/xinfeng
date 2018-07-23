@@ -1,5 +1,8 @@
 <template>
     <div class="main">
+        <div class="head">
+
+        </div>
         <el-row type="flex" class="row-bg">
             <el-col :span="24">
                 <div class="link-head">
@@ -84,6 +87,12 @@ export default {
 <style scoped>
 .main {
   margin-top: 101px;
+}
+.head {
+  width: 100%;
+  height: 300px;
+  background-color: aqua;
+  background-image: url("~/assets/img/linkme/联系我们.png");
 }
 .link-head {
   height: 200px;

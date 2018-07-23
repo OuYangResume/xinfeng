@@ -24,6 +24,7 @@
         </el-row>
         <el-row>
             <el-col :span="24">
+                <TitleMsgShow title="解决方案" titleEN="solution"></TitleMsgShow>
                 公司介绍
             </el-col>
         </el-row>
@@ -45,7 +46,11 @@
     </div>
 </template>
 <script>
+import TitleMsgShow from "~/components/common/TitleMsgShow";
 export default {
+  components: {
+    TitleMsgShow
+  },
   data() {
     return {
       activeName: "second"
