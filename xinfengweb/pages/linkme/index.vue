@@ -1,28 +1,40 @@
 <template>
-    <div>
+    <div class="main">
         <el-row type="flex" class="row-bg">
             <el-col :span="24">
-                <div class="grid-content bg-purple-dark">联系我们</div>
+                <div class="link-head">
+                    <p>联系我们</p>
+                    快速联系我们及时沟通，获得更多解决方案
+                </div>
             </el-col>
         </el-row>
         <el-row type="flex" class="row-bg" justify="center">
             <el-col :span="8">
-                <div class="grid-content bg-purple">1</div>
+                <div class="link-content">
+                    <p>业务电话:027-51895830</p>
+                    <p>前台电话:027-50851666</p>
+                    <p>人事电话:027-50851666</p>
+                </div>
             </el-col>
             <el-col :span="8">
-                <div class="grid-content bg-purple-light">2</div>
+                <div class="link-content ">
+                    <p>创新基地:武汉东湖高新区光谷大道</p>
+                    <p>303光谷.芯中心C3-11栋</p>
+                </div>
             </el-col>
             <el-col :span="8">
-                <div class="grid-content bg-purple">3</div>
+                <div class="link-content ">
+                    <p>公司传真:027-59307758</p>
+                    <p>联系邮箱:info@newfiber.com.cn</p>
+                </div>
             </el-col>
         </el-row>
-        <!-- <el-row>
+        <el-row>
             <el-col>
                 <div id="map">
                 </div>
             </el-col>
-        </el-row> -->
-        <div id="map"></div>
+        </el-row>
     </div>
 
 </template>
@@ -36,8 +48,8 @@ export default {
     return {
       map: null,
       map_config: {
-        zoom: 10,
-        center: [37.5, 106],
+        zoom: 17,
+        center: [30.477117, 114.403471],
         minZoom: 3,
         maxZoom: 18
       }
@@ -51,7 +63,7 @@ export default {
         minZoom: this.map_config.minZoom,
         maxZoom: this.map_config.maxZoom,
         attribution: "&copy; 高德地图",
-        // scrollWheelZoom: false,
+        zoomControl: false,
         logo: false
       });
       L.tileLayer
@@ -59,6 +71,7 @@ export default {
           attribution: this.map_config.attribution
         })
         .addTo(this.map);
+      L.marker([30.477117, 114.403471]).addTo(this.map);
     },
     addMapLayers() {}
   },
@@ -69,9 +82,25 @@ export default {
 </script>
 
 <style scoped>
+.main {
+  margin-top: 101px;
+}
+.link-head {
+  height: 200px;
+  width: 100%;
+  text-align: center;
+}
+.link-head > p {
+  font-size: 35px;
+  margin-bottom: 20px;
+  padding-top: 30px;
+}
+.link-content {
+  height: 300px;
+  width: 100%;
+  text-align: center;
+}
 #map {
-  height: 50vh;
-  margin-left: -20px;
-  margin-right: -20px;
+  height: 500px;
 }
 </style>
