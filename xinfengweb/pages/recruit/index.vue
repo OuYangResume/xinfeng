@@ -150,6 +150,6 @@ export default {
   color: #333333;
   margin-bottom: 15px;
 }
-.pagination-container {
-}
+/* .pagination-container {
+} */
 </style>
